@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Hub</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      background: #0a0f1e;
+      color: #e2e8f0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 48px 20px 64px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .brand-mark {
+      font-size: 2.6rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #60a5fa, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: block;
+      margin-bottom: 10px;
+    }
+    h1 { font-size: 1.5rem; font-weight: 600; color: #f1f5f9; letter-spacing: -0.02em; }
+    .sub { margin-top: 5px; font-size: 0.82rem; color: #475569; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 14px;
+      width: 100%;
+      max-width: 880px;
+    }
+
+    a.card {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      padding: 20px 22px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.035);
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.16s, transform 0.16s, border-color 0.16s;
+    }
+    a.card:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.14);
+      transform: translateY(-2px);
+    }
+
+    .card-icon { font-size: 1.75rem; line-height: 1; flex-shrink: 0; margin-top: 1px; }
+    .card-body { flex: 1; }
+    .card-title { font-size: 0.95rem; font-weight: 600; color: #f1f5f9; margin-bottom: 4px; }
+    .card-desc  { font-size: 0.78rem; color: #64748b; line-height: 1.45; }
+    .card-tag {
+      display: inline-block;
+      margin-top: 9px;
+      font-size: 0.68rem;
+      padding: 2px 8px;
+      border-radius: 99px;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+    }
+
+    .card--eval  { border-color: rgba(251,191,36,0.18); }
+    .card--eval:hover { border-color: rgba(251,191,36,0.38); }
+    .card--eval  .card-tag { background: rgba(251,191,36,0.12); color: #fcd34d; }
+
+    .card--pyq   { border-color: rgba(99,179,237,0.18); }
+    .card--pyq:hover { border-color: rgba(99,179,237,0.38); }
+    .card--pyq   .card-tag { background: rgba(99,179,237,0.12); color: #93c5fd; }
+
+    .card--ca    { border-color: rgba(251,146,60,0.18); }
+    .card--ca:hover { border-color: rgba(251,146,60,0.38); }
+    .card--ca    .card-tag { background: rgba(251,146,60,0.1); color: #fb923c; }
+
+    .card--notes { border-color: rgba(52,211,153,0.18); }
+    .card--notes:hover { border-color: rgba(52,211,153,0.38); }
+    .card--notes .card-tag { background: rgba(52,211,153,0.1); color: #6ee7b7; }
+
+    .card--facts { border-color: rgba(192,132,252,0.18); }
+    .card--facts:hover { border-color: rgba(192,132,252,0.38); }
+    .card--facts .card-tag { background: rgba(192,132,252,0.1); color: #d8b4fe; }
+
+    footer { margin-top: 52px; font-size: 0.72rem; color: #1e293b; }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="brand-mark">भारत</span>
+    <h1>Study Hub</h1>
+    <p class="sub">All tools, one place</p>
+  </header>
+
+  <div class="grid">
+
+    <a class="card card--eval" href="https://sauravanandb2w.github.io/upsc-evaluator/" target="_blank" rel="noopener">
+      <span class="card-icon">📝</span>
+      <div class="card-body">
+        <div class="card-title">UPSC AI Evaluator</div>
+        <div class="card-desc">AI-powered answer evaluation for Mains — get scores, feedback &amp; improvement tips</div>
+        <span class="card-tag">Evaluator · AI</span>
+      </div>
+    </a>
+
+    <a class="card card--pyq" href="https://sauravanandb2w.github.io/upsc-mains-pyq/" target="_blank" rel="noopener">
+      <span class="card-icon">📜</span>
+      <div class="card-body">
+        <div class="card-title">Mains PYQ</div>
+        <div class="card-desc">GS I–IV &amp; Maths Optional previous year questions with synced notes</div>
+        <span class="card-tag">GS · Maths Optional</span>
+      </div>
+    </a>
+
+    <a class="card card--ca" href="https://sauravanandb2w.github.io/upsc-current-affairs/" target="_blank" rel="noopener">
+      <span class="card-icon">🗞️</span>
+      <div class="card-body">
+        <div class="card-title">Current Affairs</div>
+        <div class="card-desc">Capture, revise &amp; consolidate UPSC current affairs — incl. DIPIN Sir CA Notes</div>
+        <span class="card-tag">CA · Daily · DIPIN Notes</span>
+      </div>
+    </a>
+
+    <a class="card card--facts" href="https://sauravanandb2w.github.io/facts-ca/" target="_blank" rel="noopener">
+      <span class="card-icon">💡</span>
+      <div class="card-body">
+        <div class="card-title">Facts</div>
+        <div class="card-desc">General facts &amp; trivia — quick reference</div>
+        <span class="card-tag">General</span>
+      </div>
+    </a>
+
+  </div>
+
+  <footer>sauravanandb2w · github.io</footer>
+</body>
+</html>
